@@ -2,13 +2,15 @@ import express from 'express';
 
 const app  = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.use(express.static('build'));
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + '/build/index.html');
 });
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
     console.log("Backend is running!");
 });
 
