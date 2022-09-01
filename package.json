@@ -1,0 +1,14 @@
+{
+  "name": "deploytest",
+  "version": "1.0.0",
+  "description": "node_modules\r .env",
+  "main": "index.js",
+  "scripts": {
+    "heroku-prebuild" : "cd client && npm ci && npm run build && mv build ../server",
+    "start" : "cd server && npm ci && tsc && node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
